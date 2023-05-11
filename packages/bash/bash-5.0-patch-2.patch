@@ -4,6 +4,7 @@ Date: Fri, 18 Jan 2019 15:13:57 -0500
 Subject: [PATCH] Bash-5.0 patch 2: fix expansion of aliases whose value ends
  with an unquoted tab
 
+
 ---
  parse.y      | 5 ++++-
  parser.h     | 1 +
