@@ -39,133 +39,16 @@ jobs:
     strategy:
       matrix:
         variant:
-          - aws-k8s-1.22
+
           - aws-k8s-1.23
-          - aws-k8s-1.24
-          - aws-k8s-1.25
-          - aws-k8s-1.26
-          - aws-k8s-1.27
-          - aws-ecs-1
         arch: [x86_64, aarch64]
         supported: [true]
         fetch-upstream: ["false"]
         include:
-          - variant: aws-dev
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
-          - variant: vmware-dev
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
-          - variant: metal-dev
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
-          - variant: metal-k8s-1.22
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
           - variant: metal-k8s-1.23
             arch: x86_64
             supported: false
             fetch-upstream: "false"
-          - variant: metal-k8s-1.24
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
-          - variant: metal-k8s-1.25
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
-          - variant: metal-k8s-1.26
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
-          - variant: metal-k8s-1.27
-            arch: x86_64
-            supported: false
-            fetch-upstream: "false"
-          - variant: vmware-k8s-1.22
-            arch: x86_64
-            supported: true
-            fetch-upstream: "false"
-          - variant: vmware-k8s-1.23
-            arch: x86_64
-            supported: true
-            fetch-upstream: "false"
-          - variant: vmware-k8s-1.24
-            arch: x86_64
-            supported: true
-            fetch-upstream: "false"
-          - variant: vmware-k8s-1.25
-            arch: x86_64
-            supported: true
-            fetch-upstream: "false"
-          - variant: vmware-k8s-1.26
-            arch: x86_64
-            supported: true
-            fetch-upstream: "false"
-          - variant: vmware-k8s-1.27
-            arch: x86_64
-            supported: true
-            fetch-upstream: "false"
-          - variant: aws-k8s-1.22-nvidia
-            arch: x86_64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.22-nvidia
-            arch: aarch64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.23-nvidia
-            arch: x86_64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.23-nvidia
-            arch: aarch64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.24-nvidia
-            arch: x86_64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.24-nvidia
-            arch: aarch64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.25-nvidia
-            arch: x86_64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.25-nvidia
-            arch: aarch64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.26-nvidia
-            arch: x86_64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.26-nvidia
-            arch: aarch64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.27-nvidia
-            arch: x86_64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-k8s-1.27-nvidia
-            arch: aarch64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-ecs-1-nvidia
-            arch: x86_64
-            supported: true
-            fetch-upstream: "true"
-          - variant: aws-ecs-1-nvidia
-            arch: aarch64
-            supported: true
-            fetch-upstream: "true"
       fail-fast: false
     steps:
       - name: Preflight step to set up the runner
