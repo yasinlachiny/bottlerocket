@@ -45,7 +45,7 @@ jobs:
         supported: [true]
         fetch-upstream: ["false"]
         include:
-          - variant: metal-k8s-1.23
+          - variant: aws-dev
             arch: x86_64
             supported: false
             fetch-upstream: "false"
